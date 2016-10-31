@@ -1,6 +1,6 @@
 body {
     width: 250px;
-    height: 200px;
+    height: 210px;
     padding: 20px 10px;
     margin: 0;
     margin-left: auto;
@@ -27,18 +27,18 @@ body {
 }
 
 .box#text-en {
-    height: 30%;
+    height: 25%;
 }
 
 .box#text-zh {
-    height: 70%;
+    height: 75%;
 }
 
 .bottom {
     position: relative;
     width: 0;
     height: 0;
-    top: 31%;
+    top: 26%;
     left: 50%;
     margin-left: -5px;
 
