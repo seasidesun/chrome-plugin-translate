@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Translate plugin",
+  "name": "Translate：弹窗翻译",
   "description": "A popups translate tool－弹窗翻译插件",
   "version": "1.0",
   "browser_action": {
