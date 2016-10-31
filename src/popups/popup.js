@@ -37,6 +37,12 @@ window.onload = function () {
                 outPut += item + '\n';
             })
         }
+        if (data.web) {
+            outPut += '------- \n'
+            data.web.map(function (item) {
+                outPut += item.key + ': ' + item.value[0] + '\n';
+            })
+        }
 
         textZhBox.value = outPut;
     }

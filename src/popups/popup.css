@@ -25,3 +25,24 @@ body {
     resize: none;
     border: 1px solid #000;
 }
+
+.box#text-en {
+    height: 30%;
+}
+
+.box#text-zh {
+    height: 70%;
+}
+
+.bottom {
+    position: relative;
+    width: 0;
+    height: 0;
+    top: 31%;
+    left: 50%;
+    margin-left: -5px;
+
+    border-top: 7px solid #797979;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
