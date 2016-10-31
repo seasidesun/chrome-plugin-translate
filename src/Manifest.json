@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Translate plugin",
-  "description": "A translate tool base on baidu-api",
+  "description": "A popups translate tool－弹窗翻译插件",
   "version": "1.0",
   "browser_action": {
    "default_popup": "popups/popup.html",
