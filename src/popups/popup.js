@@ -8,6 +8,14 @@ window.onload = function () {
         dafaultUriOfYoudao += '&keyfrom=chrome-plugin-v2';
         dafaultUriOfYoudao += '&key=1171028931';
         dafaultUriOfYoudao += '&type=data&doctype=json&version=1.1';
+    var errMapOfYoudao = {
+        0 : "正常",
+        20: "要翻译的文本过长",
+        30: "无法进行有效的翻译",
+        40: "不支持的语言类型",
+        50: "无效的key",
+        60: "无词典结果，仅在获取词典结果生效",
+    }
 
     var textEnBox = document.getElementById('text-en');
     var textZhBox = document.getElementById('text-zh');
@@ -28,22 +36,28 @@ window.onload = function () {
     });
 
     function showResultWithYoudao(data) {
-        if (data && data.errorCode != 0) return;
+        if (!data) return;
+        var outPut = "";
 
-        var outPut = data.translation + '\n';
-        if (data.basic && data.basic.explains) {
-            outPut += '------- \n'
-            data.basic.explains.map(function (item) {
-                outPut += item + '\n';
-            })
+        switch (data.errorCode) {
+            case 0:
+                outPut = data.translation + '\n';
+                if (data.basic && data.basic.explains) {
+                    outPut += '------- \n'
+                    data.basic.explains.map(function (item) {
+                        outPut += item + '\n';
+                    })
+                }
+                if (data.web) {
+                    outPut += '------- \n'
+                    data.web.map(function (item) {
+                        outPut += item.key + ': ' + item.value[0] + '\n';
+                    })
+                }
+                break;
+            default:
+                outPut = '错误: ' + errMapOfYoudao[data.errorCode];
         }
-        if (data.web) {
-            outPut += '------- \n'
-            data.web.map(function (item) {
-                outPut += item.key + ': ' + item.value[0] + '\n';
-            })
-        }
-
         textZhBox.value = outPut;
     }
 
@@ -72,7 +86,7 @@ window.onload = function () {
 
     //http get
     function HttpGet(url, cb) {
-        textZhBox.value = "loadng...";
+        textZhBox.value = "loading...";
         var xmlHttp;
         if (window.XMLHttpRequest) {
             xmlHttp = new XMLHttpRequest();
