@@ -21,10 +21,10 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "windows": "Alt+Y",
-        "mac": "Command+Y",
-        "chromeos": "Alt+Y",
-        "linux": "Alt+Y"
+        "windows": "Alt+Shift+Y",
+        "mac": "Command+Shift+Y",
+        "chromeos": "Alt+Shift+Y",
+        "linux": "Alt+Shift+Y"
       }
     }
   }

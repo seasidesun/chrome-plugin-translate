@@ -59,6 +59,7 @@ window.onload = function () {
                 outPut = '错误: ' + errMapOfYoudao[data.errorCode];
         }
         textZhBox.value = outPut;
+        textZhBox.style.height = textZhBox.scrollHeight + textZhBox.scrollTop + 'px';
     }
 
     function callApi(q, to, cb) {

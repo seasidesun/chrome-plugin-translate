@@ -21,6 +21,7 @@ body {
     margin-bottom: 10px;
     box-sizing: border-box;
     float: left;
+    overflow: auto;
 
     resize: none;
     border: 1px solid #000;
@@ -31,7 +32,7 @@ body {
 }
 
 .box#text-zh {
-    height: 75%;
+    min-height: 75%;
 }
 
 .bottom {
