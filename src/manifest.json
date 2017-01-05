@@ -22,7 +22,7 @@
     "_execute_browser_action": {
       "suggested_key": {
         "windows": "Alt+Shift+Y",
-        "mac": "Command+Shift+Y",
+        "mac": "Alt+Shift+Y",
         "chromeos": "Alt+Shift+Y",
         "linux": "Alt+Shift+Y"
       }
