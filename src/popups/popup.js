@@ -30,6 +30,7 @@ window.onload = function () {
         });
 
         autoSetBoxHeight(textFrBox);
+        clearContent(textToBox);
     });
 
     function showResultWithYoudao(data) {
@@ -113,8 +114,6 @@ window.onload = function () {
     }
 
     function autoSetBoxHeight (box) {
-        box.style = '';
-
         var clientHeight = box.clientHeight,
             scrollHeight = box.scrollHeight,
             scrollTop    = box.scrollTop;
@@ -122,5 +121,10 @@ window.onload = function () {
         if (clientHeight >= scrollHeight) return;
 
         box.style.height = scrollHeight + 'px';
+    }
+
+    function clearContent (box) {
+        box.value = '';
+        box.style.height = '';
     }
 }
