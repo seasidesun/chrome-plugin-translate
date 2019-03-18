@@ -30,10 +30,12 @@ body {
 
 .box#text-from {
     height: 25%;
+    max-height: 210px;
 }
 
 .box#text-to {
     min-height: 75%;
+    max-height: 320px;
     margin-bottom: 10px;
 }
 
