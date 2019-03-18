@@ -15,8 +15,7 @@
     "default_icon": "img/icon.png"
   },
   "permissions": [
-    "http://fanyi.youdao.com/*",
-    "http://api.fanyi.baidu.com/api/*"
+    "http://fanyi.youdao.com/*"
   ],
   "commands": {
     "_execute_browser_action": {
