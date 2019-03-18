@@ -114,13 +114,8 @@ window.onload = function () {
     }
 
     function autoSetBoxHeight (box) {
-        var clientHeight = box.clientHeight,
-            scrollHeight = box.scrollHeight,
-            scrollTop    = box.scrollTop;
-
-        if (clientHeight >= scrollHeight) return;
-
-        box.style.height = scrollHeight + 'px';
+        box.style.height = 'auto';
+        box.style.height = box.scrollHeight + 'px';
     }
 
     function clearContent (box) {
